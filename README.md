@@ -1,6 +1,16 @@
 # learn_collection
 
-A new Flutter project.
+My flutter learning collection
+
+## Codes
+
+- Clock by [@afzalali15](https://gist.github.com/afzalali15/6d5c485eb6a5f64116f35a0360eea94f)
+
+## Screenshots
+
+<p align="center">
+  <img src="clock.png" width="300px" alt="Clock" title="clock">
+</p>
 
 ## Getting Started
 
