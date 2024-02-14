@@ -9,7 +9,7 @@ My flutter learning collection
 ## Screenshots
 
 <p align="center">
-  <img src="clock.png" width="300px" alt="Clock" title="clock">
+  <img src="screen.gif" width="300px" alt="Clock" title="clock">
 </p>
 
 ## Getting Started

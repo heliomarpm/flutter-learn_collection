@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:learn_collection/date_picker/datepicker_page.dart';
-
+import 'repository/data_reader.dart';
+import 'models/tile_modal.dart';
+import 'date_picker/datepicker_page.dart';
+import 'circle_progress/progress_page.dart';
 import 'auto_scroll/autoscroll_page.dart';
 import 'clock/clock_page.dart';
-import 'models/tile_modal.dart';
-import 'repository/data_reader.dart';
 
 class Tiles extends StatefulWidget {
   const Tiles({super.key});
@@ -115,6 +115,8 @@ class _TilesState extends State<Tiles> {
         return const AutoScrollPage();
       case 'Date Picker':
         return const DatePickerPage();
+      case 'Progress':
+        return const ProgressPage();
       default:
         return null;
     }
