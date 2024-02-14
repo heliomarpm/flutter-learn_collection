@@ -1,59 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:learn_collection/clock/home_page.dart' as clock;
+import 'models/tile_modal.dart';
+import 'repository/data_reader.dart';
+import 'clock/home_page.dart' as clock;
 
-class Tiles extends StatelessWidget {
-  Tiles({super.key});
+class Tiles extends StatefulWidget {
+  const Tiles({super.key});
 
-  Tile item1 = Tile(
-    title: "Clock",
-    subtitle: "Analog Clock ",
-    event: "Interface",
-    image: "assets/icons/clock.png",
-    page: const clock.HomePage(),
-  );
+  @override
+  State<Tiles> createState() => _TilesState();
+}
 
-  Tile item2 = Tile(
-    title: "Movies",
-    subtitle: "Auto Scroll",
-    event: "Design",
-    image: "assets/icons/movies.png",
-    page: null,
-  );
-  Tile item3 = Tile(
-    title: "Locations",
-    subtitle: "Lucy Mao going to Office",
-    event: "",
-    image: "assets/icons/map.png",
-    page: null,
-  );
-  Tile item4 = Tile(
-    title: "Activity",
-    subtitle: "Rose favirited your Post",
-    event: "",
-    image: "assets/icons/festival.png",
-    page: null,
-  );
-  Tile item5 = Tile(
-    title: "To do",
-    subtitle: "Homework, Design",
-    event: "4 Items",
-    image: "assets/icons/todo.png",
-    page: null,
-  );
-  Tile item6 = Tile(
-    title: "Settings",
-    subtitle: "",
-    event: "2 Items",
-    image: "assets/icons/setting.png",
-    page: null,
-  );
+class _TilesState extends State<Tiles> {
+  List<Tile> _tiles = [];
+
+  @override
+  void initState() {
+    getTiles();
+    super.initState();
+  }
+
+  Future<void> getTiles() async {
+    Map data = await DataReader.getJson();
+
+    List<Tile> tiles = List<Map<String, dynamic>>.from(data['tiles'])
+        .map((tileData) => Tile.fromMap(tileData))
+        .toList();
+
+    setState(() {
+      _tiles = tiles;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    List<Tile> tiles = [item1, item2, item3, item4, item5, item6];
-
     var color = 0xff453658;
 
     return Flexible(
@@ -63,7 +44,9 @@ class Tiles extends StatelessWidget {
         mainAxisSpacing: 18,
         childAspectRatio: 1.0,
         padding: const EdgeInsets.only(left: 16, right: 16),
-        children: tiles.map((tile) {
+        children: _tiles.map((tile) {
+          Widget? page = _getPage(tile.title);
+
           return Container(
             // tile container
             decoration: BoxDecoration(
@@ -72,10 +55,10 @@ class Tiles extends StatelessWidget {
             child: GestureDetector(
               onTap: () {
                 // Navegue para a página associada ao tile
-                if (tile.page != null) {
+                if (page != null) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => tile.page!),
+                    MaterialPageRoute(builder: (context) => page),
                   );
                 }
               },
@@ -105,7 +88,7 @@ class Tiles extends StatelessWidget {
                   ),
                   // const SizedBox(height: 8),
                   // Text(
-                  //   tile.event,
+                  //   tile.type,
                   //   style: GoogleFonts.openSans(
                   //       textStyle: const TextStyle(
                   //           color: Colors.white70,
@@ -131,22 +114,4 @@ class Tiles extends StatelessWidget {
         return null;
     }
   }
-}
-
-
-class Tile {
-  String title;
-  String subtitle;
-  String event;
-  String image;
-  // TilePage page;
-  Widget? page;
-
-  Tile({
-    required this.title,
-    required this.subtitle,
-    required this.event,
-    required this.image,
-    this.page,
-  });
 }

@@ -1,0 +1,40 @@
+{
+    "tiles": [
+        {
+            "title": "Clock",
+            "subtitle": "Analog Clock ",
+            "type": "Interface",
+            "image": "assets/icons/clock.png"
+        },
+        {
+            "title": "Movies",
+            "subtitle": "Auto Scroll",
+            "type": "Design",
+            "image": "assets/icons/movies.png"
+        },
+        {
+            "title": "Locations",
+            "subtitle": "Lucy Mao going to Office",
+            "type": "",
+            "image": "assets/icons/map.png"
+        },
+        {
+            "title": "Activity",
+            "subtitle": "Rose favirited your Post",
+            "type": "",
+            "image": "assets/icons/festival.png"
+        },
+        {
+            "title": "To do",
+            "subtitle": "Homework, Design",
+            "type": "4 Items",
+            "image": "assets/icons/todo.png"
+        },
+        {
+            "title": "Settings",
+            "subtitle": "",
+            "type": "2 Items",
+            "image": "assets/icons/setting.png"
+        }
+    ]
+}
