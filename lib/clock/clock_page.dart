@@ -5,14 +5,14 @@ import 'dart:async';
 import 'dart:math';
 
 // source: https://gist.github.com/afzalali15/6d5c485eb6a5f64116f35a0360eea94f
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class ClockPage extends StatefulWidget {
+  const ClockPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<ClockPage> createState() => _ClockPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _ClockPageState extends State<ClockPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

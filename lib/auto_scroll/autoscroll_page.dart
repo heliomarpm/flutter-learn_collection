@@ -5,14 +5,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class AutoScrollPage extends StatefulWidget {
+  const AutoScrollPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<AutoScrollPage> createState() => _AutoScrollPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _AutoScrollPageState extends State<AutoScrollPage> {
   ScrollController scrollController = ScrollController();
 
   List<String> assets = [

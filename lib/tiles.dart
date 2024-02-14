@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:learn_collection/date_picker/datepicker_page.dart';
 
-import 'auto_scroll/home_page.dart' as movies;
-import 'clock/home_page.dart' as clock;
+import 'auto_scroll/autoscroll_page.dart';
+import 'clock/clock_page.dart';
 import 'models/tile_modal.dart';
 import 'repository/data_reader.dart';
 
@@ -109,9 +110,11 @@ class _TilesState extends State<Tiles> {
     // Mapeie o nome da classe da página para a instância correspondente
     switch (title) {
       case 'Clock':
-        return const clock.HomePage();
+        return const ClockPage();
       case 'Movies':
-        return const movies.HomePage();
+        return const AutoScrollPage();
+      case 'Date Picker':
+        return const DatePickerPage();
       default:
         return null;
     }

@@ -13,16 +13,16 @@
             "image": "assets/icons/movies.png"
         },
         {
-            "title": "Locations",
-            "subtitle": "Lucy Mao going to Office",
-            "type": "",
-            "image": "assets/icons/map.png"
+            "title": "Date Picker",
+            "subtitle": "Calendar",
+            "type": "Component",
+            "image": "assets/icons/calendar.png"
         },
         {
-            "title": "Activity",
-            "subtitle": "Rose favirited your Post",
-            "type": "",
-            "image": "assets/icons/festival.png"
+            "title": "Progress",
+            "subtitle": "Progress Indicator",
+            "type": "Component",
+            "image": "assets/icons/map.png"
         },
         {
             "title": "To do",
