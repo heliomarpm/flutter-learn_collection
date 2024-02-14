@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'auto_scroll/home_page.dart' as movies;
+import 'clock/home_page.dart' as clock;
 import 'models/tile_modal.dart';
 import 'repository/data_reader.dart';
-import 'clock/home_page.dart' as clock;
 
 class Tiles extends StatefulWidget {
   const Tiles({super.key});
@@ -109,7 +110,8 @@ class _TilesState extends State<Tiles> {
     switch (title) {
       case 'Clock':
         return const clock.HomePage();
-      // Adicione mais casos conforme necessário para outras páginas
+      case 'Movies':
+        return const movies.HomePage();
       default:
         return null;
     }

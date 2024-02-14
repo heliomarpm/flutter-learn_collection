@@ -36,5 +36,16 @@
             "type": "2 Items",
             "image": "assets/icons/setting.png"
         }
+    ],
+    "posters": [
+        "assets/posters/poster-01.png",
+        "assets/posters/poster-02.png",
+        "assets/posters/poster-03.png",
+        "assets/posters/poster-04.png",
+        "assets/posters/poster-05.png",
+        "assets/posters/poster-06.png",
+        "assets/posters/poster-07.png",
+        "assets/posters/poster-08.png",
+        "assets/posters/poster-09.png"
     ]
 }
