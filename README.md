@@ -5,6 +5,9 @@ My flutter learning collection
 ## Codes
 
 - Clock by [@afzalali15](https://gist.github.com/afzalali15/6d5c485eb6a5f64116f35a0360eea94f)
+- Auto Scroll
+- Date Picker
+- Circle Progress by [@Hemsara](https://github.com/Hemsara/flutter-progress-indicator)
 
 ## Screenshots
 
