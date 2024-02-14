@@ -34,14 +34,21 @@ class ClockView extends StatefulWidget {
 
 class _ClockViewState extends State<ClockView> {
   late DateTime _now;
+  late Timer _timer;
 
   @override
   void initState() {
     _updateTime();
-    Timer.periodic(const Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       _updateTime();
     });
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel(); // Cancela o temporizador no dispose
+    super.dispose();
   }
 
   void _updateTime() {
