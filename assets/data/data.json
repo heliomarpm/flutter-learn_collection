@@ -22,19 +22,19 @@
             "title": "Progress",
             "subtitle": "Progress Indicator",
             "type": "Component",
-            "image": "assets/icons/map.png"
+            "image": "assets/icons/progress.png"
+        },
+        {
+            "title": "Calculator",
+            "subtitle": "",
+            "type": "Tools",
+            "image": "assets/icons/calculator.png"
         },
         {
             "title": "To do",
             "subtitle": "Homework, Design",
             "type": "4 Items",
             "image": "assets/icons/todo.png"
-        },
-        {
-            "title": "Settings",
-            "subtitle": "",
-            "type": "2 Items",
-            "image": "assets/icons/setting.png"
         }
     ],
     "posters": [

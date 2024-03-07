@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'repository/data_reader.dart';
+
 import 'models/tile_modal.dart';
+import 'repository/data_reader.dart';
 import 'date_picker/datepicker_page.dart';
 import 'circle_progress/progress_page.dart';
 import 'auto_scroll/autoscroll_page.dart';
 import 'clock/clock_page.dart';
+import 'flatcalculator/flat_calculator.dart';
 
 class Tiles extends StatefulWidget {
   const Tiles({super.key});
@@ -117,6 +119,8 @@ class _TilesState extends State<Tiles> {
         return const DatePickerPage();
       case 'Progress':
         return const ProgressPage();
+      case 'Calculator':
+        return const FlatCalculatorPage();
       default:
         return null;
     }
