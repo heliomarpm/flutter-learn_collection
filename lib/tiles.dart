@@ -51,21 +51,20 @@ class _TilesState extends State<Tiles> {
         children: _tiles.map((tile) {
           Widget? page = _getPage(tile.title);
 
-          return Container(
-            // tile container
-            decoration: BoxDecoration(
-                color: Color(color), borderRadius: BorderRadius.circular(10)),
-            // tile content
-            child: GestureDetector(
-              onTap: () {
-                // Navegue para a página associada ao tile
-                if (page != null) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => page),
-                  );
-                }
-              },
+          return GestureDetector(
+            onTap: () {
+              // Navegue para a página associada ao tile
+              if (page != null) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => page),
+                );
+              }
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Color(color),
+                  borderRadius: BorderRadius.circular(10)),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
